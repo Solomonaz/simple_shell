@@ -15,6 +15,15 @@ void _puts(char *str);
 unsigned int nbr_spaces(char *s);
 char **stringToTokens(char *str);
 
+/* path */
+int _path(char *first, char **input, char **env, int *ex_st);
+
+
+/* environment */
+int printenv(char **env, int *ex_st);
+char *cpy_env(char **env);
+
+
 /* built-ins & execute function */
 void builtins(char *line, char **args, char **env, int *ex_st);
 void _execute(int status, char **args, int *ex_st, int *tal);
